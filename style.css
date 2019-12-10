@@ -1,6 +1,9 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+h1{
+  font-weight: lighter;
+}
 ul{
   padding-left: 0;
 }
