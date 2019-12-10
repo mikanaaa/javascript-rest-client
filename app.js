@@ -34,3 +34,20 @@ function getFetch(el) {
       }
     });
 }
+$(document).ready(() => {
+  $("#getJquery").on("click", () => {
+    $.get(
+      "https://jsonplaceholder.typicode.com/photos?id="+$("#jquery-id").val(),
+      (data, status) => {
+        let li = document.createElement("li");
+        let p = document.createElement("p");
+        p.innerText = data[0].title;
+        li.appendChild(p);
+        let img = document.createElement("img");
+        img.src = data[0].thumbnailUrl;
+        li.appendChild(img);
+        $("#jquery-list").prepend(li);
+      }
+    );
+  });
+});

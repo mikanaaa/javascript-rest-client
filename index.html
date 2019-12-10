@@ -12,12 +12,21 @@
     <button onclick="getXmlHttpRequest(this)">Get</button>
     <button onclick="cleanElement(this)">Clean</button>
     <ul></ul>
+    
     <h1>2. Fetch</h1>
     <p>Enter number in input field</p>
-    <input id="fetch-id" type="number" min="1" max="9" placeholder="User id between 0 & 9" />
+    <input id="fetch-id" type="number" min="1" max="9" placeholder="User id between 1 & 9" />
     <button onclick="getFetch(this)">Get</button>
     <button onclick="cleanElement(this)">Clean</button>
     <ul></ul>
+    
+    <h1>3. Jquery</h1>
+    <input id="jquery-id" type="number" min="1" max="1000" placeholder="Image id between 1 & 1000" />
+    <button id="getJquery">Get</button>
+    <button onclick="cleanElement(this)">Clean</button>
+    <ul id="jquery-list"></ul>
+    
+    <script src="libs/jquery-3.4.1.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
