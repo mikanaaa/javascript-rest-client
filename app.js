@@ -34,3 +34,4 @@ function getFetch(el) {
       }
     });
 }
+function getJquery(el) {}
