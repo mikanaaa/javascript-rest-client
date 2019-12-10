@@ -37,7 +37,7 @@ function getFetch(el) {
 $(document).ready(() => {
   $("#getJquery").on("click", () => {
     $.get(
-      "https://jsonplaceholder.typicode.com/photos?id="+$("#jquery-id").val(),
+      "https://jsonplaceholder.typicode.com/photos?id=" + $("#jquery-id").val(),
       (data, status) => {
         let li = document.createElement("li");
         let p = document.createElement("p");
@@ -51,3 +51,14 @@ $(document).ready(() => {
     );
   });
 });
+function getAxios(el) {
+  axios
+    .get("https://jsonplaceholder.typicode.com/users")
+    .then(function(response) {
+      for (const user of response.data) {
+        let li = document.createElement("li");
+        li.innerText = user.address.city;
+        el.nextElementSibling.nextElementSibling.appendChild(li);
+      }
+    });
+}
