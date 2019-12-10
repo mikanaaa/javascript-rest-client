@@ -18,3 +18,6 @@ function getXmlHttpRequest(el) {
   };
   request.send();
 }
+function getFetch(el) {
+  console.log("Fetching data.")
+}
