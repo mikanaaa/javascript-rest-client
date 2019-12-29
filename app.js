@@ -78,3 +78,9 @@ function postXmlHttpRequest() {
 
   request.send(formData);
 }
+function putFetch(){
+  let ri = {};
+  ri.method = "PUT"
+  ri.body = '{"name": "Will", "age": 100}';
+  fetch("https://jsonplaceholder.typicode.com/posts/1",ri).then(r => r.text()).then(r => alert(`User updated: ${r}`)).catch(e=>console.log(e));
+}
