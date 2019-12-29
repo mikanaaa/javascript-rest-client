@@ -95,3 +95,14 @@ function putFetch(){
   ri.body = '{"name": "Will", "age": 100}';
   fetch("https://jsonplaceholder.typicode.com/posts/1",ri).then(r => r.text()).then(r => alert(`User updated: ${r}`)).catch(e=>console.log(e));
 }
+
+function patchAxios() {
+  axios.patch(
+    "https://jsonplaceholder.typicode.com/posts/1",{
+      params:{
+        id: 1,
+        name: "Josh"
+      }
+    }
+  ).then((r)=>console.log(r)).catch((e)=>console.log(e));
+}

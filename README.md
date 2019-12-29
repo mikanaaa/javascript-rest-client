@@ -1,10 +1,18 @@
 # JavaScript Rest Client
-Different techniques of making asynchronous http request againts restful api with javascript.
+Making asynchronous http request againts restful api using various tools provided
 
 ## Topics
-* Http request using Get, Post, Put & Delete methods to perform CRUD operations on server.
-* Using XmlHttpRequest, Fetch Api, JQuery, Axios to make Http request
-* Manipulating DOC on callback
+* Methods
+  * Get
+  * Post
+  * Put
+  * Delete
+  * Patch
+* Tools
+  * XMLHttpRequest
+  * JQuery
+  * Fetch API
+  * Axio
 
 ## Try it
 ```
