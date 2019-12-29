@@ -1,7 +1,7 @@
 function cleanElement(el) {
   el.nextElementSibling.innerHTML = "";
 }
-function getXmlHttpRequest(el) {
+function getXmlHttpRequest() {
   console.log("Request started.");
   cleanElement(el.nextElementSibling);
   let request = new XMLHttpRequest();
@@ -19,7 +19,7 @@ function getXmlHttpRequest(el) {
   };
   request.send();
 }
-function getFetch(el) {
+function getFetch() {
   console.log("Fetching data.");
   cleanElement(el.nextElementSibling);
   let id = document.querySelector("#fetch-id").value;
@@ -51,7 +51,7 @@ $(document).ready(() => {
     );
   });
 });
-function getAxios(el) {
+function getAxios() {
   axios
     .get("https://jsonplaceholder.typicode.com/users")
     .then(function(response) {
@@ -61,4 +61,20 @@ function getAxios(el) {
         el.nextElementSibling.nextElementSibling.appendChild(li);
       }
     });
+}
+function postXmlHttpRequest() {
+  let request = new XMLHttpRequest();
+  request.open("POST", "https://jsonplaceholder.typicode.com/posts");
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+  request.onreadystatechange = function() {
+    if (request.readyState == 4 && request.status == 201) {
+      alert("User created");
+    }
+  };
+  let formData = new FormData();
+  formData.append("name", "bill");
+  formData.append("age", "100");
+
+  request.send(formData);
 }
