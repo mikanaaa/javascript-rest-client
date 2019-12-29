@@ -50,6 +50,17 @@ $(document).ready(() => {
       }
     );
   });
+  $("#jqueryDelete").on("click", function(){
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts/10",
+      type: "DELETE",
+      success: (r,s,xhr)=>{
+        console.log(r)
+        console.log(s)
+        console.log(xhr)
+      }
+    });
+  });
 });
 function getAxios() {
   axios
